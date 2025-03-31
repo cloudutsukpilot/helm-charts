@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  git-push:
+    desc: git push with changes
+    cmds:
+      - git status
+      - git add .
+      - git commit -m "{{.CLI_ARGS}}"
+      - git push github
